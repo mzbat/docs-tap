@@ -184,8 +184,6 @@ Application Accelerator starter templates for Python and Java are removed in thi
 #### <a id='1-7-0-services-toolkit-br'></a> v1.7.0 Breaking changes: Services Toolkit
 
 - Services Toolkit forces explicit cluster-wide permissions to `claim` from a `ClusterInstanceClass`.
-  You must now grant the permission to `claim` from a `ClusterInstanceClass` by using a `ClusterRole`
-  and `ClusterRoleBinding`.
   For more information, see [The claim verb for ClusterInstanceClass](./services-toolkit/reference/api/rbac.hbs.md#claim-verb).
 
 #### <a id='1-7-0-cli-re-br'></a> v1.7.0 Breaking changes: Tanzu CLI command reference documenation
@@ -255,6 +253,12 @@ The following issues, listed by component and area, are resolved in this release
 ### <a id='1-7-0-known-issues'></a> v1.7.0 Known issues
 
 This release has the following known issues, listed by component and area.
+v1.7.0 Known issues: Linux Kernel CVEs
+Kernel level vulnerabilities are regularly identified and patched by Canonical. Tanzu Application Platform releases with available images, which might contain known vulnerabilities. When Canonical makes patched images available, Tanzu Application Platform incorporates these fixed images into future releases.
+The kernel runs on your container host VM, not the Tanzu Application Platform container image. Even with a patched Tanzu Application Platform image, the vulnerability is not mitigated until you deploy your containers on a host with a patched OS. An unpatched host OS might be exploitable if the base image is deployed.
+For each known vulnerability, links to the Ubuntu Security page are provided. These pages might list mitigation steps that operators can take to secure the cluster.
+
+- CVE with link to description.
 
 #### <a id='1-7-0-COMPONENT-NAME-ki'></a> v1.7.0 Known issues: COMPONENT-NAME
 
